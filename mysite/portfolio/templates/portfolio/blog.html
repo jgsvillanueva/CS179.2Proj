@@ -1,0 +1,24 @@
+{% extends "portfolio/header.html" %}
+
+{% block content %}
+  <main>
+    <div>
+      <h1 id="title-txt">Design Portfolio</h1>
+      <h3>Student at ADMU, Branding Director at User Experience Society</h2>
+    </div>
+  </main>
+  <div id="about-sec">
+    <span id="about_txt">Junior at Ateneo de Manila University. Aspiring visual
+       and interaction designer based in Manila. I’m passionate about making
+       lasting experiences through design</span>
+  </div>
+  <div class="article_grid">
+    {% for post in object_list %}
+      <article>
+        <h5> {{ post.created_on}}
+        <a href="{{ post.id }}">{{post.title}}</a>
+        </h5>
+      </article>
+    {% endfor %}
+  </div>
+{% endblock %}
