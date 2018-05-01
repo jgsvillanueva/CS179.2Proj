@@ -1,7 +1,13 @@
 {% extends "portfolio/header.html" %}
 
 {% block content %}
-
-
+  <main>
+      <h1>{{post.title}}</h1>
+  </main>
+  <div>
+    <p id="body-text">
+      {{post.content}}
+    </p>
+  </div>
 
 {% endblock %}

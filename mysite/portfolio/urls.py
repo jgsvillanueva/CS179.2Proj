@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     url(r'^home/$', ListView.as_view(queryset=Post.objects.all().order_by("-created_on"),
         template_name="portfolio/blog.html")),
-    url(r'^(?P<pk>\d+)$', DetailView.as_view(model = Post,
-                                                template_name="portfolio/post.html")),    
+    url(r'^home/(?P<pk>[0-9]+)/$', DetailView.as_view(model = Post,
+                                                template_name="portfolio/post.html")),
 ]

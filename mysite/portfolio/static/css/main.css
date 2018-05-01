@@ -26,11 +26,24 @@ body {
   font-family: 'Rubik';
 }
 
+#logo2 {
+  display: flex;
+  height: 75px;
+  width: 75px;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+  background-color: white;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: 'Rubik';
+}
+
 #skip {
   color: black;
   position: absolute;
   top: 0;
-  right: 100%; /* moves off screen */
+  right: 100%;
 }
 
 #skip:focus {
@@ -56,9 +69,23 @@ h1{
   font-family: 'Rubik', sans-serif;
   padding-left: 10vw;
   padding-top: 16vh;
+  font-size: 10vh;
+  margin: auto;
 }
 h3{
   padding-left: 10vw;
+  padding-right: 5vw;
+  padding-top: 5vh;
+  margin: auto;
+
+}
+
+#body-text{
+  padding-top: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  font-size: 18px;
+  padding-bottom: 15vh;
 }
 
 #about-sec{
@@ -87,13 +114,6 @@ h3{
   display: none;
 }
 
-/* This has higher specificity /
- * type -> class -> id */
-/*#navigation ul {*/
-  /*display: flex;*/
-  /*justify-content: space-around;*/
-/*}*/
-
 .menu-button {
   padding: 10px;
   background-color: #0127ec;
@@ -112,11 +132,13 @@ h3{
   flex-direction: row;
   justify-content: flex-end;
   padding: 1em, 2.4em;
+    text-decoration: none;
 }
 
 #navigation ul li {
   list-style-type: none;
   display: inline-block;
+  padding-left: 5px;
 }
 
 .article_grid {
@@ -133,6 +155,24 @@ h3{
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.blog_header{
+  padding-bottom: 8vh;
+}
+
+.hero_heading{
+  display: flex;
+  padding-top: 10vh;
+  padding-bottom: .3em;
+  padding-left: 6vw;
+  font-family: Rubik;
+  font-size: 2.25em;
+  color: blue;
+}
+.hero_sub{
+  display: flex;
+  padding-left: 6vw;
 }
 
 .article_grid > article:nth-child(3n+3){
@@ -161,12 +201,6 @@ h3{
   }
 }
 
-/*
- *
- * This is kept below the media query
- * so that it would be the one on top of the cascade
- *
- */
 .open {
   display: block;
   z-index: 50;
@@ -181,50 +215,3 @@ h3{
 .open li {
   padding: 1em 0;
 }
-
-main {
-  /*max-width: 60em;*/
-  /*max-width: 60rem;*/
-}
-
-p {
-  font-size: 1em;
-  line-height: 1.48;
-}
-
-.featured_articles {
-  display: grid;
-  grid-template-columns: 7fr 3fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-  "article_1 article_2"
-  "article_1 article_3"
-  "article_1 article_4";
-  max-height: 100vh;
-}
-
-.featured_articles a {
-  display: block;
-  max-width: 70vw;
-  height: 100%;
-}
-
-.featured_articles figure {
-  margin: 0;
-  height: 100%;
-}
-
-.featured_articles img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.featured_articles figcaption {
-  transform: translatey(-1vh) translatex(1vw);
-}
-
-.featured_articles a:nth-child(1) { grid-area: article_1; }
-.featured_articles a:nth-child(2) { grid-area: article_2; }
-.featured_articles a:nth-child(3) { grid-area: article_3; }
-.featured_articles a:nth-child(4) { grid-area: article_4; }
